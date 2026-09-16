@@ -54,3 +54,6 @@ yarn-error.log*
 Thumbs.db
 ehthumbs.db
 Desktop.ini
+
+*.sqlite3
+biblioteca_db
