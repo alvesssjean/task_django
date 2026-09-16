@@ -1,0 +1,56 @@
+# ##########################################
+# ##########################################
+.env
+.env.*
+.env.local
+!.env.example
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+*.cert
+
+# ##########################################
+# Dependências e Módulos
+# ##########################################
+node_modules/
+jspm_packages/
+web_modules/
+.pnp
+.pnp.js
+
+# ##########################################
+# Arquivos de Build, Saída e Logs
+# ##########################################
+dist/
+build/
+out/
+bin/
+obj/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ##########################################
+# Editores de Código e IDEs
+# ##########################################
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# ##########################################
+# Sistema Operacional
+# ##########################################
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
