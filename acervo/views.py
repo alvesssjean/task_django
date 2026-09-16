@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import LivroDigital, LivroFisico
+from .forms import LivroForm
+
 
 # Create your views here.
 def inicio(request):
@@ -21,3 +23,13 @@ def lista_livros_fisicos(request):
         request, 'acervo/lista.html',
         {'livros': livros}
     )
+    
+def novo_livro(request):
+    if request.method == 'POST':
+        form = LivroForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('lista')
+    else:
+        form = LivroForm()
+    return render(request, 'acervo/form.html', {'form': form})
