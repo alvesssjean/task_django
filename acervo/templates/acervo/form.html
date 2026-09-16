@@ -1,0 +1,11 @@
+{% extends 'acervo/base.html' %}
+
+{% block content %}
+<h1>Novo livro</h1>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Salvar</button>
+</form>
+<a href="{% url 'acervo:lista' %}">Voltar</a>
+{% endblock %}
